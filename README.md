@@ -12,6 +12,6 @@
 4. Jalankan Perintah berikut
     ```bash
     streamlit run dashboard.py
-Jika Anda menggunakan Windows dan menemui error 'streamlit is not recognized', silakan gunakan perintah alternatif berikut:
+5. Jika Anda menggunakan Windows dan menemui error 'streamlit is not recognized', silakan gunakan perintah alternatif berikut:
     ```bash
     python -m streamlit run dashboard.py
