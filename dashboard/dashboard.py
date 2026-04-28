@@ -9,7 +9,13 @@ st.set_page_config(page_title="E-Commerce Dashboard", page_icon="🛒", layout="
 # Fungsi untuk memuat data (menggunakan cache agar lebih cepat)
 @st.cache_data
 def load_data():
-    df = pd.read_csv("main_data.csv")
+    # Mendapatkan path absolut dari direktori file dashboard.py saat ini
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    # Menggabungkan path direktori dengan nama file CSV
+    file_path = os.path.join(current_dir, "main_data.csv")
+    
+    df = pd.read_csv(file_path)
+    
     # Memastikan tipe data datetime
     datetime_cols = ["order_purchase_timestamp", "order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date"]
     for col in datetime_cols:
